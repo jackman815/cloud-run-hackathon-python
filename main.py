@@ -42,6 +42,7 @@ def move():
         bot=[]
         bot['x'] = player['x']
         bot['y'] = player['y']
+        bot['dir'] = player['direction']
         bots.append(bot)
 
     return moves[random.randrange(len(moves))]
