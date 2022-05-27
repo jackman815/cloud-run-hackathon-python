@@ -40,8 +40,8 @@ def move():
     bots=[]
     for player in state:
         bot=[]
-        bot['x'] = player['x']
-        bot['y'] = player['y']
+        bot['x'] = int(player['x'])
+        bot['y'] = int(player['y'])
         bot['dir'] = player['direction']
         bots.append(bot)
     for bot in bots:
