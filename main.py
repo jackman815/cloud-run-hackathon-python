@@ -37,6 +37,12 @@ def move():
     x = state['https://cloud-run-hackathon-python-2lrdjc6pya-uc.a.run.app']['x']
     y = state['https://cloud-run-hackathon-python-2lrdjc6pya-uc.a.run.app']['y']
     dir = state['https://cloud-run-hackathon-python-2lrdjc6pya-uc.a.run.app']['direction']
+    bots=[]
+    for player in state:
+        bot=[]
+        bot['x'] = player['x']
+        bot['y'] = player['y']
+        bots.append(bot)
 
     return moves[random.randrange(len(moves))]
 
