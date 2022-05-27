@@ -44,8 +44,16 @@ def move():
         bot['y'] = player['y']
         bot['dir'] = player['direction']
         bots.append(bot)
-
-    return moves[random.randrange(len(moves))]
+    for bot in bots:
+        if bot['x'] - x <3:
+            if bot['x'] - x <3 & bot['dir'] == dir:
+                return 'F'
+            elif bot['x'] - x <3:
+                return bot['dir']
+            else:
+                return moves[random.randrange(len(moves))]
+        else:
+            return moves[random.randrange(len(moves))]
 
 if __name__ == "__main__":
   app.run(debug=False,host='0.0.0.0',port=int(os.environ.get('PORT', 8080)))
