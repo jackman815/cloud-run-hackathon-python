@@ -32,6 +32,12 @@ def index():
 def move():
     request.get_data()
     logger.info(request.json)
+    data = request.json
+    state = data['arena']['state']
+    x = state['https://cloud-run-hackathon-python-2lrdjc6pya-uc.a.run.app']['x']
+    y = state['https://cloud-run-hackathon-python-2lrdjc6pya-uc.a.run.app']['y']
+    dir = state['https://cloud-run-hackathon-python-2lrdjc6pya-uc.a.run.app']['direction']
+
     return moves[random.randrange(len(moves))]
 
 if __name__ == "__main__":
